@@ -1,0 +1,19 @@
+syntax="proto3";
+
+package proto;
+
+message FullName{
+    string m_name = 1;
+    string m_surname = 2;
+    optional string m_patronymic = 3;
+}
+
+message Student{
+    FullName m_fullname = 1;
+    repeated int32 m_scores = 2;
+    double m_averagescore = 3;
+}
+
+message StudentsGroup{
+    repeated Student m_group = 1;
+}
